@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlet Slinger - Phase 1 Prototype</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Overlay Styles */
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(15, 15, 20, 0.9);
+            z-index: 100;
+            color: #fff;
+            text-align: center;
+        }
+
+        #overlay h1 {
+            color: #ff2a55; /* Scarlet theme */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 42, 85, 0.5);
+        }
+
+        #overlay p {
+            max-width: 500px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #cccccc;
+            font-size: 1.2rem;
+        }
+
+        #enter-vr {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background-color: #ff2a55;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(255, 42, 85, 0.4);
+        }
+
+        #enter-vr:hover {
+            background-color: #ff4d70;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 42, 85, 0.6);
+        }
+
+        /* Debug Logger */
+        #log {
+            position: fixed;
+            bottom: 12px;
+            left: 12px;
+            right: 12px;
+            pointer-events: none;
+            z-index: 50;
+            font-family: monospace;
+            font-size: 14px;
+            color: #00ff00;
+            text-shadow: 1px 1px 0 #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 4px;
+        }
+
+        .log-entry {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4px 8px;
+            border-radius: 4px;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div id="overlay">
+        <h1>Scarlet Slinger – Phase 1 Prototype</h1>
+        <p>Put down your controllers and use your hands. Press the button below to enter VR on Quest 3.</p>
+        <button id="enter-vr">Enter VR</button>
+    </div>
+
+    <!-- Container for runtime logs -->
+    <div id="log"></div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
