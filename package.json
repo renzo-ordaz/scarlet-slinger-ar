@@ -8,7 +8,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "handy.js": "github:stewdio/handy.js",
     "three": "^0.160.0"
   },
   "devDependencies": {

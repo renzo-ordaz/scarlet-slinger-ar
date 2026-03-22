@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
 import { XRHandModelFactory } from 'three/examples/jsm/webxr/XRHandModelFactory.js';
-import { Handy } from 'handy.js';
+import { Handy } from './handy/Handy.js';
 
 let scene, camera, renderer;
 let hand1, hand2;
